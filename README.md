@@ -30,12 +30,14 @@ What's inside the box?
 * Grunt
 * Memcache
 * MongoDB
-* NodeJS
+* NodeJS & npm-check-updates
 * Beanstalkd
 * Compass Sass
 * Compass Sass bootstrap
 * OpenJDK 7
 * PhpMyAdmin
+* git & git-flow
+* Jenkins
 
 Nginx will auto load any .conf file under the path "data\PROJECT\server_config".
 

@@ -9,7 +9,10 @@ class tools {
     'curl',
     'python-software-properties',
     'lftp',
-    'libssl0.9.8'
+    'libssl0.9.8',
+    'git',
+    'git-flow',
+    'groovy'
     ]:
     ensure => present,
     require => Exec['update']
