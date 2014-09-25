@@ -16,4 +16,11 @@ class nodjs {
     command => 'npm install -g forever',
     require => Package['nodejs']
   }
+
+  package {
+    'npm-check-updates':
+      provider => 'npm',
+      ensure => present,
+      require => Package['nodejs']
+  }
 }
