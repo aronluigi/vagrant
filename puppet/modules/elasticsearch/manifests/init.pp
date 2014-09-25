@@ -11,7 +11,7 @@ class elasticsearch {
     provider => dpkg,
     ensure => installed,
     source => "/tmp/elasticsearch-1.2.1.deb",
-    require => [Package['memcached'], Package['openjdk-7-jdk']]
+    require => [Package['memcached'], Package['openjdk-7-jdk'], Exec['java update alternatives']]
   }
 
   exec {

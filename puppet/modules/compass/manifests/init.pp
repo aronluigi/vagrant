@@ -5,17 +5,11 @@ class compass {
     require => Exec['update']
   }
 
-  exec {
-    'compass install':
-    command => 'gem update --system; gem install compass;',
-    path => ['/opt/vagrant_ruby/bin', '/usr/bin/gem'],
+  package {
+    ['sass', 'compass', 'bootstrap-sass']:
+    provider => 'gem',
+    ensure => 'installed',
     require => [Package['ruby'], Package['rubygems']]
   }
 
-  exec {
-    'compass bootstrap install':
-    command => 'gem install bootstrap-sass',
-    path => ['/opt/vagrant_ruby/bin', '/usr/bin/gem'],
-    require => [Package['ruby'], Package['rubygems'], Exec['compass install']]
-  }
 }
