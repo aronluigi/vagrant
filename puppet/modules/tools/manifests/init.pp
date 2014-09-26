@@ -5,6 +5,7 @@ class tools {
     'htop',
     'nmap',
     'build-essential',
+    'libpq-dev',
     'checkinstall',
     'curl',
     'python-software-properties',
